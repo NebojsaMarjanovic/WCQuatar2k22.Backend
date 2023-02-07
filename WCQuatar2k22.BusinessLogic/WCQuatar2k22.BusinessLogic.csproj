@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WCQuatar2k22.Domain\WCQuatar2k22.Domain.csproj" />
+    <ProjectReference Include="..\WCQuatar2k22.Repository\WCQuatar2k22.Repository.csproj" />
+  </ItemGroup>
+
+</Project>
