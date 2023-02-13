@@ -15,6 +15,5 @@ namespace WCQuatar2k22.BusinessLogic.Models
         public int? GostRezultat { get; set; }
         public DateTime VremeOdrzavanja { get; set; }
         public int StadionId { get; set; }
-        public bool PredajaMeca { get; set; }
     }
 }

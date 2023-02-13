@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.ComponentModel.DataAnnotations;
 using WCQuatar2k22.BusinessLogic;
 using WCQuatar2k22.BusinessLogic.Enumerations;
 using WCQuatar2k22.BusinessLogic.Models;
@@ -41,7 +42,7 @@ namespace WCQuatar2k22.Controllers
         }
 
 
-        [HttpPut(Name = "UnestiRezultat")]
+        [HttpPut("{utakmicaId}-{domacinRezultat}-{gostRezultat}")]
         public async Task<IActionResult> UpdateRezultat(int utakmicaId, int domacinRezultat, int gostRezultat)
         {
 

@@ -10,6 +10,6 @@ namespace WCQuatar2k22.Repository.Interfaces
     public interface IDrzavaRepository:IRepository<Drzava>
     {
         Task UpdateGrupa(int drzavaId, int grupaId);
-        Task UpdateBodovi(int drzavaId, int bodovi);
+        Task UpdateBodovi(int drzavaId, int postignutiGolovi, int primljeniGolovi, int bodovi);
     }
 }

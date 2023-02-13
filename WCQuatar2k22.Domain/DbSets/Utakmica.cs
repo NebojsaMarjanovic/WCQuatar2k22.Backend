@@ -12,6 +12,5 @@
         public DateTime VremeOdrzavanja { get; set; }
         public Stadion Stadion { get; set; }
         public int StadionId { get; set; }
-        public bool PredajaMeca { get; set; }
     }
 }

@@ -30,18 +30,10 @@ namespace WCQuatar2k22.BusinessLogic
                 DomacinId = utakmicaDTO.DomacinId,
                 GostId = utakmicaDTO.GostId,
                 VremeOdrzavanja = utakmicaDTO.VremeOdrzavanja,
-                PredajaMeca = utakmicaDTO.PredajaMeca,
                 StadionId = utakmicaDTO.StadionId
             };
 
             int utakmicaId = await _unitOfWork.UtakmicaRepository.Add(utakmica);
-
-            if (utakmica.PredajaMeca)
-            {
-                utakmica.DomacinRezultat = utakmicaDTO.DomacinRezultat;
-                utakmica.GostRezultat = utakmicaDTO.GostRezultat;
-                await UpdateBodovi(utakmica, utakmica.DomacinRezultat, utakmica.GostRezultat);
-            }
 
             await _unitOfWork.Save();
             return ResponseStatus.Ok;
@@ -57,8 +49,7 @@ namespace WCQuatar2k22.BusinessLogic
             try
             {
                 var utakmica = await _unitOfWork.UtakmicaRepository.SearchById(utakmicaId);
-                if (utakmica.VremeOdrzavanja < DateTime.Now || utakmica.PredajaMeca)
-                {
+                  
                     await _unitOfWork.UtakmicaRepository.UpdateRezultat(utakmicaId, rezultatDomacin, rezultatGost);
                     await _unitOfWork.Save();
 
@@ -66,9 +57,7 @@ namespace WCQuatar2k22.BusinessLogic
 
                     await _unitOfWork.Save();
                     return ResponseStatus.Ok;
-                }
-                else
-                    return ResponseStatus.BadRequest;
+                    
             }
             catch (Exception)
             {
@@ -76,7 +65,7 @@ namespace WCQuatar2k22.BusinessLogic
             }            
         }
 
-        public async Task UpdateBodovi(Utakmica utakmica, int? rezultatDomacin, int? rezultatGost)
+        public async Task UpdateBodovi(Utakmica utakmica, int rezultatDomacin, int rezultatGost)
         {
             int bodoviDomacin = 0;
             int bodoviGost = 0;
@@ -88,8 +77,8 @@ namespace WCQuatar2k22.BusinessLogic
             else
                 bodoviGost = bodoviDomacin = 1;
 
-            await _unitOfWork.DrzavaRepository.UpdateBodovi(utakmica.DomacinId, bodoviDomacin);
-            await _unitOfWork.DrzavaRepository.UpdateBodovi(utakmica.GostId, bodoviGost);
+            await _unitOfWork.DrzavaRepository.UpdateBodovi(utakmica.DomacinId, rezultatDomacin, rezultatGost, bodoviDomacin);
+            await _unitOfWork.DrzavaRepository.UpdateBodovi(utakmica.GostId,rezultatGost, rezultatDomacin, bodoviGost);
         }
     }
 }

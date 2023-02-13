@@ -53,11 +53,35 @@ namespace WCQuatar2k22.Repository.Implementations
             throw new NotImplementedException();
         }
 
-        public async Task UpdateBodovi(int drzavaId, int bodovi)
+        public async Task UpdateBodovi(int drzavaId, int postignutiGolovi, int primljeniGolovi, int bodovi)
         {
             var drzava = await SearchById(drzavaId);
             drzava.OsvojeniPoeni += bodovi;
-            _context.Drzava.Attach(drzava).Property(x => x.OsvojeniPoeni).IsModified = true;
+            drzava.BrojOdigranihMeceva++;
+            drzava.BrojDatihGolova += postignutiGolovi;
+            drzava.BrojPrimljenihGolova += primljeniGolovi;
+            //_context.Drzava.Attach(drzava).Property(x => x.OsvojeniPoeni).IsModified = true;
+            //_context.Drzava.Attach(drzava).Property(x => x.BrojOdigranihMeceva).IsModified = true;
+
+
+            switch (bodovi)
+            {
+                case 3:
+                    drzava.BrojPobeda++;
+                    //_context.Drzava.Attach(drzava).Property(x => x.BrojPobeda).IsModified = true;
+                    break;
+                case 1:
+                    drzava.BrojNeresenih++;
+                    //_context.Drzava.Attach(drzava).Property(x => x.BrojNeresenih).IsModified = true;
+                    break;
+                case 0:
+                    drzava.BrojIzgubljenih++;
+                    //_context.Drzava.Attach(drzava).Property(x => x.BrojIzgubljenih).IsModified = true;
+                    break;
+            }
+            //_context.Drzava.Update(drzava);
+            _context.Drzava.Attach(drzava).State = EntityState.Modified;
+
         }
     }
 }
