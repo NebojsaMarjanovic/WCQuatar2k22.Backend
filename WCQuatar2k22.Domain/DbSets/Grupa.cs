@@ -5,5 +5,6 @@
         public int GrupaId { get; set; }
         public string NazivGrupe { get; set; }
         public List<Drzava> Drzave { get; set; }
+        public bool JeZakljucana { get; set; }
     }
 }

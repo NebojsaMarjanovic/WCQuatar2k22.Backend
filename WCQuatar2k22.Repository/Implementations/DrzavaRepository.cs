@@ -83,5 +83,18 @@ namespace WCQuatar2k22.Repository.Implementations
             _context.Drzava.Attach(drzava).State = EntityState.Modified;
 
         }
+
+        public async Task IzmeniDrzaveUGrupi(int grupaId, int staraDrzava, int novaDrzava)
+        {
+            var stara = await SearchById(staraDrzava);
+            var nova = await SearchById(novaDrzava);
+
+            stara.GrupaId = null;
+            nova.GrupaId = grupaId;
+
+            _context.Drzava.Attach(stara).Property(x => x.GrupaId).IsModified = true;
+            _context.Drzava.Attach(nova).Property(x => x.GrupaId).IsModified = true;
+
+        }
     }
 }

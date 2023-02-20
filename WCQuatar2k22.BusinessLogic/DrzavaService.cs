@@ -40,5 +40,13 @@ namespace WCQuatar2k22.BusinessLogic
 
             return slobodneDrzave;
         }
+
+        public async Task IzmeniDrzaveUGrupi(int grupaId, int staraDrzava, int novaDrzava)
+        {
+          
+            await _unitOfWork.DrzavaRepository.IzmeniDrzaveUGrupi(grupaId, staraDrzava, novaDrzava);
+            await _unitOfWork.Save();
+
+        }
     }
 }

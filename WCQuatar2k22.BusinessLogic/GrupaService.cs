@@ -29,5 +29,16 @@ namespace WCQuatar2k22.BusinessLogic
         {
             return await _unitOfWork.GrupaRepository.GetAll();
         }
+
+        public async Task<List<Grupa>> GetZakljucaneGrupe()
+        {
+            return await _unitOfWork.GrupaRepository.SearchBy(x => x.JeZakljucana == true);
+        }
+
+        public async Task ZakljucajGrupu(int grupaId)
+        {
+            await _unitOfWork.GrupaRepository.ZakljucajGrupu(grupaId);
+            await _unitOfWork.Save();
+        }
     }
 }

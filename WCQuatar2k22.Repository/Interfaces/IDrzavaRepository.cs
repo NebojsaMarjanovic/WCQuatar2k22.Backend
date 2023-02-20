@@ -11,5 +11,6 @@ namespace WCQuatar2k22.Repository.Interfaces
     {
         Task UpdateGrupa(int drzavaId, int grupaId);
         Task UpdateBodovi(int drzavaId, int postignutiGolovi, int primljeniGolovi, int bodovi);
+        Task IzmeniDrzaveUGrupi(int grupaId, int staraDrzava, int novaDrzava);
     }
 }

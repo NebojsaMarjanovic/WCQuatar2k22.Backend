@@ -35,19 +35,27 @@ namespace WCQuatar2k22.Repository.Implementations
             return await _context.Grupa.Include(g => g.Drzave.OrderByDescending(x=>x.OsvojeniPoeni)).ToListAsync();
         }
 
-        public Task<List<Grupa>> SearchBy(Expression<Func<Grupa, bool>> predicate)
+        public async Task<List<Grupa>> SearchBy(Expression<Func<Grupa, bool>> predicate)
         {
-            throw new NotImplementedException();
+            return await _context.Grupa.Include(x=>x.Drzave).Where(predicate).ToListAsync();
         }
 
-        public Task<Grupa> SearchById(object id)
+        public async Task<Grupa> SearchById(object id)
         {
-            throw new NotImplementedException();
+            return await _context.Grupa.FirstAsync(x => x.GrupaId == (int)id);
         }
 
         public Task<Grupa> Update(Grupa entity)
         {
             throw new NotImplementedException();
+        }
+
+        public async Task ZakljucajGrupu(int grupaId)
+        {
+            var grupa = await SearchById(grupaId);
+            grupa.JeZakljucana = true;
+            _context.Grupa.Attach(grupa).Property(x => x.JeZakljucana).IsModified = true;
+
         }
     }
 }

@@ -34,7 +34,7 @@ namespace WCQuatar2k22.Repository.Implementations
         public async Task<List<Utakmica>> GetAll()
         {
             return  await _context.Utakmica.Include(x=>x.Domacin)
-                .Include(x=>x.Gost).ToListAsync();
+                .Include(x=>x.Gost).Include(x=>x.Stadion).ToListAsync();
         }
 
         public async Task<List<Utakmica>> SearchBy(Expression<Func<Utakmica, bool>> predicate)

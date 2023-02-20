@@ -29,5 +29,12 @@ namespace WCQuatar2k22.Controllers
 
             return await _drzavaService.GetRaspoloziveDrzave(vremeOdrzavanja,grupaId);
         }
+
+        [HttpPut("{grupaId}-{staraDrzava}-{novaDrzava}")]
+        public async Task IzmeniDrzaveUGrupi(int grupaId, int staraDrzava, int novaDrzava)
+        {
+            await _drzavaService.IzmeniDrzaveUGrupi(grupaId, staraDrzava, novaDrzava);
+        }
+
     }
 }

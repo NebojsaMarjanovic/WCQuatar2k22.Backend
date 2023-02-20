@@ -12,5 +12,7 @@ namespace WCQuatar2k22.BusinessLogic
     {
         Task DodajGrupu(GrupaDTO grupaDTO);
         Task<List<Grupa>> GetGrupe();
+        Task ZakljucajGrupu(int grupaId);
+        Task<List<Grupa>> GetZakljucaneGrupe();
     }
 }

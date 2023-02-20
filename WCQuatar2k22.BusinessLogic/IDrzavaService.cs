@@ -11,6 +11,6 @@ namespace WCQuatar2k22.BusinessLogic
     {
         Task<List<Drzava>> GetRaspoloziveDrzave(DateTime vremeOdrzavanja, int grupaId);
         Task<List<Drzava>> GetDrzave();
-
+        Task IzmeniDrzaveUGrupi(int grupaId, int staraDrzava, int novaDrzava);
     }
 }

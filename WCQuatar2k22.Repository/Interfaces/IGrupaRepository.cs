@@ -9,5 +9,6 @@ namespace WCQuatar2k22.Repository.Interfaces
 {
     public interface IGrupaRepository:IRepository<Grupa>
     {
+        Task ZakljucajGrupu(int grupaId);
     }
 }
