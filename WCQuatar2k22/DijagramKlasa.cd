@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="WCQuatar2k22.Controllers.DrzavaController">
+    <Position X="7" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEQAAAAAAAAAABAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Controllers\DrzavaController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_drzavaService" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="WCQuatar2k22.Controllers.GrupaController">
+    <Position X="7" Y="2.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAggAAAAAAAAAAAAAAAAQAEAAAAIAAgAAA=</HashCode>
+      <FileName>Controllers\GrupaController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_grupaService" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="WCQuatar2k22.Controllers.StadionController">
+    <Position X="7" Y="5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAgAAACAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Controllers\StadionController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_stadionService" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="WCQuatar2k22.Controllers.UtakmicaController">
+    <Position X="7" Y="7" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAARCAAAAAAAAQAAAAIAAA=</HashCode>
+      <FileName>Controllers\UtakmicaController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_utakmicaService" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="WCQuatar2k22.Models.Response">
+    <Position X="10.25" Y="4" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Models\Response.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="WCQuatar2k22.BusinessLogic.IDrzavaService">
+    <Position X="3" Y="0.75" Width="2.25" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="WCQuatar2k22.BusinessLogic.IGrupaService">
+    <Position X="3" Y="2.75" Width="2.25" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="WCQuatar2k22.BusinessLogic.IStadionService">
+    <Position X="3" Y="5.5" Width="2.25" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="WCQuatar2k22.BusinessLogic.IUtakmicaService">
+    <Position X="3" Y="7.25" Width="2.25" />
+    <TypeIdentifier />
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -25,9 +25,16 @@ namespace WCQuatar2k22.Repository.Implementations
             return entity.GrupaId;
         }
 
-        public Task Delete(int id)
+        public async Task Delete(int id)
         {
-            throw new NotImplementedException();
+            //var drzave = await _context.Drzava.Where(x => x.GrupaId == id).ToListAsync();
+            //foreach(var drzava in drzave)
+            //{
+            //    drzava.GrupaId = null;
+            //    _context.Drzava.Update(drzava);
+            //}
+            var grupa = await SearchById(id);
+            _context.Remove(grupa);
         }
 
         public async Task<List<Grupa>> GetAll()

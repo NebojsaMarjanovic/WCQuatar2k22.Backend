@@ -23,7 +23,7 @@ namespace WCQuatar2k22.Controllers
         [HttpPost(Name = "ZakaziUtakmicu")]
         public async Task<IActionResult> AddUtakmica(UtakmicaDTO utakmica)
         {
-            switch(await _utakmicaService.AddUtakmica(utakmica))
+            switch(await _utakmicaService.ZakaziUtakmicu(utakmica))
             {
                 case ResponseStatus.Ok:
                     return StatusCode(StatusCodes.Status200OK, new Response { Status="Success", Message="Utakmica je uspešno zakazana!"});
@@ -40,6 +40,14 @@ namespace WCQuatar2k22.Controllers
 
             return await _utakmicaService.GetUtakmice();
         }
+
+        [HttpGet("{datumUtakmice}")]
+        public async Task<List<Utakmica>> GetUtakmicePoDatumu(DateTime datumUtakmice)
+        {
+
+            return await _utakmicaService.GetUtakmicePoDatumu(datumUtakmice);
+        }
+
 
 
         [HttpPut("{utakmicaId}-{domacinRezultat}-{gostRezultat}")]

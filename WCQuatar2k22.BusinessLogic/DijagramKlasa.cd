@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="WCQuatar2k22.BusinessLogic.DrzavaService">
+    <Position X="11.75" Y="1.75" Width="2.5" />
+    <AssociationLine Name="_unitOfWork" Type="WCQuatar2k22.Repository.UnitOfWork.IUnitOfWork" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="14.25" Y="3.279" />
+        <Point X="14.625" Y="3.279" />
+        <Point X="14.625" Y="3.499" />
+        <Point X="16.25" Y="3.499" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAgAAAAAAAAAIAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>DrzavaService.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_unitOfWork" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WCQuatar2k22.BusinessLogic.GrupaService">
+    <Position X="14.75" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAABAAAgAAAAgAAAAAAAAAAAQAAAAAAAAAgAAA=</HashCode>
+      <FileName>GrupaService.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_unitOfWork" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WCQuatar2k22.BusinessLogic.StadionService">
+    <Position X="18" Y="0.5" Width="2.25" />
+    <AssociationLine Name="_unitOfWork" Type="WCQuatar2k22.Repository.UnitOfWork.IUnitOfWork" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="19.125" Y="1.988" />
+        <Point X="19.125" Y="2.875" />
+        <Point X="17.5" Y="2.875" />
+        <Point X="17.5" Y="3.25" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAgAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>StadionService.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_unitOfWork" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WCQuatar2k22.BusinessLogic.UtakmicaService">
+    <Position X="20.75" Y="1.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAACAAAAAAAgAAAAAAFAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>UtakmicaService.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_unitOfWork" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="WCQuatar2k22.BusinessLogic.IDrzavaService">
+    <Position X="6" Y="2.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>IDrzavaService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="WCQuatar2k22.BusinessLogic.IGrupaService">
+    <Position X="8.75" Y="4" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAABAAAgAAAAAAAAAAAAAAAAQAAAAAAAAAgAAA=</HashCode>
+      <FileName>IGrupaService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="WCQuatar2k22.BusinessLogic.IStadionService">
+    <Position X="8.75" Y="2.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IStadionService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="WCQuatar2k22.BusinessLogic.IUtakmicaService">
+    <Position X="6" Y="4" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAACAAAAAAAAAAAAAABAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>IUtakmicaService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="WCQuatar2k22.Repository.UnitOfWork.IUnitOfWork">
+    <Position X="16.25" Y="3.25" Width="1.5" />
+    <AssociationLine Name="DrzavaRepository" Type="WCQuatar2k22.Repository.Interfaces.IDrzavaRepository" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="16.25" Y="4.312" />
+        <Point X="13.167" Y="4.312" />
+        <Point X="13.167" Y="6.5" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="GrupaRepository" Type="WCQuatar2k22.Repository.Interfaces.IGrupaRepository" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="17.125" Y="4.353" />
+        <Point X="17.125" Y="4.728" />
+        <Point X="16.651" Y="4.728" />
+        <Point X="16.651" Y="5.915" />
+        <Point X="16" Y="5.915" />
+        <Point X="16" Y="6.75" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="StadionRepository" Type="WCQuatar2k22.Repository.Interfaces.IStadionRepository" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="17.562" Y="4.353" />
+        <Point X="17.562" Y="6.625" />
+        <Point X="18.812" Y="6.625" />
+        <Point X="18.812" Y="7" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="UtakmicaRepository" Type="WCQuatar2k22.Repository.Interfaces.IUtakmicaRepository" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="17.75" Y="4.115" />
+        <Point X="18.125" Y="4.115" />
+        <Point X="18.125" Y="5.557" />
+        <Point X="20.5" Y="5.557" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier />
+    <ShowAsAssociation>
+      <Property Name="DrzavaRepository" />
+      <Property Name="GrupaRepository" />
+      <Property Name="StadionRepository" />
+      <Property Name="UtakmicaRepository" />
+    </ShowAsAssociation>
+  </Interface>
+  <Interface Name="WCQuatar2k22.Repository.Interfaces.IDrzavaRepository">
+    <Position X="12" Y="6.5" Width="2" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="WCQuatar2k22.Repository.Interfaces.IGrupaRepository">
+    <Position X="15.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="WCQuatar2k22.Repository.Interfaces.IStadionRepository">
+    <Position X="18.5" Y="7" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="WCQuatar2k22.Repository.Interfaces.IUtakmicaRepository">
+    <Position X="20.5" Y="5" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

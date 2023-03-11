@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="WCQuatar2k22.Domain.Models.Drzava">
+    <Position X="1.75" Y="3" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>CAAAAhAAAQAAEAABEBAAIAAAAAAFAAEAAQAAAAAAAAA=</HashCode>
+      <FileName>DbSets\Drzava.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Grupa" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="WCQuatar2k22.Domain.Models.Grupa">
+    <Position X="2" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAACAAIAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>DbSets\Grupa.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WCQuatar2k22.Domain.Models.Stadion">
+    <Position X="4.75" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AIQAAAAAAAAAAAAAAAAAACAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DbSets\Stadion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WCQuatar2k22.Domain.Models.Utakmica">
+    <Position X="5.5" Y="3.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AIEAAAAABAAAIAAAAAAQCAAAAAACAAAAIAAAAAAAIAA=</HashCode>
+      <FileName>DbSets\Utakmica.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Domacin" />
+      <Property Name="Gost" />
+      <Property Name="Stadion" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="WCQuatar2k22.Domain.Domain.Context">
+    <Position X="8.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAQAAAAAAAAAQCAAAEAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Context.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Drzava" />
+      <Property Name="Stadion" />
+      <Property Name="Grupa" />
+      <Property Name="Utakmica" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Microsoft.EntityFrameworkCore.DbSet&lt;TEntity&gt;">
+    <Position X="12.5" Y="1.25" Width="2.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

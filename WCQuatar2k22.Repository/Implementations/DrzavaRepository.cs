@@ -48,9 +48,10 @@ namespace WCQuatar2k22.Repository.Implementations
             return await _context.Drzava.FindAsync(id);
         }
 
-        public async Task<Drzava> Update(Drzava entity)
+        public Task<Drzava> Update(Drzava entity)
         {
-            throw new NotImplementedException();
+            _context.Update(entity);
+            return Task.FromResult(entity);
         }
 
         public async Task UpdateBodovi(int drzavaId, int postignutiGolovi, int primljeniGolovi, int bodovi)

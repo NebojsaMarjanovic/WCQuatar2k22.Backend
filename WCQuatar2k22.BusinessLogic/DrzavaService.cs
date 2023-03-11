@@ -18,9 +18,9 @@ namespace WCQuatar2k22.BusinessLogic
             _unitOfWork = unitOfWork;   
         }
 
-        public async Task<List<Drzava>> GetDrzave()
+        public async Task<List<Drzava>> GetNerasporedjeneDrzave()
         {
-            return await _unitOfWork.DrzavaRepository.GetAll();
+            return await _unitOfWork.DrzavaRepository.SearchBy(x => x.Grupa == null);
         }
 
         public async Task<List<Drzava>> GetRaspoloziveDrzave(DateTime vremeOdrzavanja, int grupaId)

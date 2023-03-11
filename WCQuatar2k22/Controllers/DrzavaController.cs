@@ -16,11 +16,11 @@ namespace WCQuatar2k22.Controllers
             _drzavaService = drzavaService;
         }
 
-        [HttpGet(Name = "GetDrzave")]
+        [HttpGet(Name = "GetNerasporedjeneDrzave")]
         public async Task<List<Drzava>> GetAsync()
         {
 
-            return await _drzavaService.GetDrzave();
+            return await _drzavaService.GetNerasporedjeneDrzave();
         }
 
         [HttpGet("{grupaId}/{vremeOdrzavanja}")]

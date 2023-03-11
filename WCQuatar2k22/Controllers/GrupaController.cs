@@ -33,15 +33,22 @@ namespace WCQuatar2k22.Controllers
         [HttpPost (Name = "DodajGrupu")]
         public async Task<IActionResult> AddGrupaAsync(GrupaDTO grupa)
         {
-            await _grupaService.DodajGrupu(grupa);
+            await _grupaService.KreirajGrupu(grupa);
             return Ok();
         }
 
 
-        [HttpPut(Name = "ZakljucajGrupuGrupu")]
+        [HttpPut(Name = "ZakljucajGrupu")]
         public async Task<IActionResult> ZakljucajGrupu(int grupaId)
         {
             await _grupaService.ZakljucajGrupu(grupaId);
+            return Ok();
+        }
+
+        [HttpDelete(Name = "ObrisiGrupu")]
+        public async Task<IActionResult> ObrisiGrupu(int grupaId)
+        {
+            await _grupaService.ObrisiGrupu(grupaId);
             return Ok();
         }
 

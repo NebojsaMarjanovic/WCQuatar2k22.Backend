@@ -13,7 +13,7 @@ namespace WCQuatar2k22.BusinessLogic
         {
             _unitOfWork = unitOfWork;
         }
-        public async Task<ResponseStatus> AddUtakmica(UtakmicaDTO utakmicaDTO)
+        public async Task<ResponseStatus> ZakaziUtakmicu(UtakmicaDTO utakmicaDTO)
         {
             var sveUtakmice = await _unitOfWork.UtakmicaRepository.GetAll();
 
@@ -79,6 +79,11 @@ namespace WCQuatar2k22.BusinessLogic
 
             await _unitOfWork.DrzavaRepository.UpdateBodovi(utakmica.DomacinId, rezultatDomacin, rezultatGost, bodoviDomacin);
             await _unitOfWork.DrzavaRepository.UpdateBodovi(utakmica.GostId,rezultatGost, rezultatDomacin, bodoviGost);
+        }
+
+        public async Task<List<Utakmica>> GetUtakmicePoDatumu(DateTime datumUtakmice)
+        {
+            return await _unitOfWork.UtakmicaRepository.SearchBy(x => x.VremeOdrzavanja.Date == datumUtakmice.Date);
         }
     }
 }

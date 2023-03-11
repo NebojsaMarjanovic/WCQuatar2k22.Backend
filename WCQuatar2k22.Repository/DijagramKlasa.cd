@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="WCQuatar2k22.Repository.Implementations.DrzavaRepository">
+    <Position X="19.75" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAABQBAABAAAAQAAAAAAEAEAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Implementations\DrzavaRepository.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_context" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WCQuatar2k22.Repository.Implementations.GrupaRepository">
+    <Position X="13.5" Y="2.5" Width="2" />
+    <AssociationLine Name="_context" Type="WCQuatar2k22.Domain.Domain.Context" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="15.5" Y="4.624" />
+        <Point X="15.625" Y="4.624" />
+        <Point X="15.625" Y="5.875" />
+        <Point X="16" Y="5.875" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAYAAAABABAAhAAAAAAAAAAAAAEAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Implementations\GrupaRepository.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_context" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WCQuatar2k22.Repository.Implementations.StadionRepository">
+    <Position X="19.75" Y="6" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAABABAABAAAAAAAAAAAAAEAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Implementations\StadionRepository.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_context" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WCQuatar2k22.Repository.Implementations.UtakmicaRepository">
+    <Position X="16" Y="1.75" Width="2" />
+    <Members>
+      <Method Name="UpdateRezultat" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAYAAAABABAABAAAAAAAAAAAACEAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Implementations\UtakmicaRepository.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_context" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WCQuatar2k22.Repository.UnitOfWork.UnitOfWork">
+    <Position X="13" Y="6" Width="1.5" />
+    <AssociationLine Name="DrzavaRepository" Type="WCQuatar2k22.Repository.Interfaces.IDrzavaRepository" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="13" Y="6.125" />
+        <Point X="13" Y="5.288" />
+        <Point X="12.186" Y="5.288" />
+        <Point X="12.186" Y="3.844" />
+        <Point X="8.583" Y="3.844" Type="JumpStart" />
+        <Point X="8.417" Y="3.844" Type="JumpEnd" />
+        <Point X="6" Y="3.844" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="StadionRepository" Type="WCQuatar2k22.Repository.Interfaces.IStadionRepository" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="13" Y="6.375" />
+        <Point X="12.625" Y="6.375" />
+        <Point X="12.625" Y="6.062" />
+        <Point X="8.521" Y="6.062" Type="JumpStart" />
+        <Point X="8.355" Y="6.062" Type="JumpEnd" />
+        <Point X="6" Y="6.062" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="UtakmicaRepository" Type="WCQuatar2k22.Repository.Interfaces.IUtakmicaRepository" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="13" Y="7.296" />
+        <Point X="13" Y="7.706" />
+        <Point X="6" Y="7.706" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAABAAAAAAAABAAAAAAAQAAAAAAAACAAIA=</HashCode>
+      <FileName>UnitOfWork\UnitOfWork.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_context" />
+      <Property Name="DrzavaRepository" />
+      <Property Name="GrupaRepository" />
+      <Property Name="StadionRepository" />
+      <Property Name="UtakmicaRepository" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WCQuatar2k22.Domain.Domain.Context">
+    <Position X="16" Y="5.25" Width="2.5" />
+    <TypeIdentifier />
+  </Class>
+  <Interface Name="WCQuatar2k22.Repository.Interfaces.IDrzavaRepository">
+    <Position X="4" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAQAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IDrzavaRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="WCQuatar2k22.Repository.Interfaces.IGrupaRepository">
+    <Position X="4.5" Y="1.5" Width="1.5" />
+    <InheritanceLine Type="WCQuatar2k22.Repository.Interfaces.IRepository&lt;TEntity&gt;" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="1.75" Y="4" />
+        <Point X="1.75" Y="2.08" />
+        <Point X="4.5" Y="2.08" />
+        <Point X="4.5" Y="2.062" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IGrupaRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="WCQuatar2k22.Repository.Interfaces.IRepository&lt;TEntity&gt;">
+    <Position X="1" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAABABAAAAAAAAAAAAAAAAEAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="WCQuatar2k22.Repository.Interfaces.IStadionRepository">
+    <Position X="4.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IStadionRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="WCQuatar2k22.Repository.Interfaces.IUtakmicaRepository">
+    <Position X="4.5" Y="6.75" Width="1.5" />
+    <InheritanceLine Type="WCQuatar2k22.Repository.Interfaces.IRepository&lt;TEntity&gt;" ManuallyRouted="true">
+      <Path>
+        <Point X="1.75" Y="6.065" />
+        <Point X="1.75" Y="7.101" />
+        <Point X="5.25" Y="7.101" />
+        <Point X="5.25" Y="6.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IUtakmicaRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="WCQuatar2k22.Repository.UnitOfWork.IUnitOfWork">
+    <Position X="7.75" Y="4.5" Width="1.5" />
+    <AssociationLine Name="UtakmicaRepository" Type="WCQuatar2k22.Repository.Interfaces.IUtakmicaRepository" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="8.438" Y="5.603" />
+        <Point X="8.438" Y="7.366" />
+        <Point X="6" Y="7.366" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAABAAAAAAAQAAAAAAAACAAIA=</HashCode>
+      <FileName>UnitOfWork\IUnitOfWork.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="DrzavaRepository" />
+      <Property Name="GrupaRepository" />
+      <Property Name="StadionRepository" />
+      <Property Name="UtakmicaRepository" />
+    </ShowAsAssociation>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

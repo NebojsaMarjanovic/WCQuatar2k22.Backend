@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="WCQuatar2k22.BusinessLogic.DrzavaService">
+    <Position X="5.5" Y="5.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAgAAAAAAAAAIAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>DrzavaService.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_unitOfWork" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WCQuatar2k22.BusinessLogic.GrupaService">
+    <Position X="10.75" Y="5.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAABAAAgAAAAgAAAAAAAAAAAQAAAAAAAAAgAAA=</HashCode>
+      <FileName>GrupaService.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_unitOfWork" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="WCQuatar2k22.Repository.UnitOfWork.IUnitOfWork">
+    <Position X="8.25" Y="3.25" Width="2.5" />
+    <TypeIdentifier />
+    <ShowAsAssociation>
+      <Property Name="DrzavaRepository" />
+      <Property Name="GrupaRepository" />
+    </ShowAsAssociation>
+  </Interface>
+  <Interface Name="WCQuatar2k22.Repository.Interfaces.IDrzavaRepository">
+    <Position X="13.75" Y="2.75" Width="2.25" />
+    <InheritanceLine Type="WCQuatar2k22.Repository.Interfaces.IRepository&lt;TEntity&gt;" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="10.75" Y="2.312" />
+        <Point X="14.125" Y="2.312" />
+        <Point X="14.125" Y="2.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="WCQuatar2k22.Repository.Interfaces.IGrupaRepository">
+    <Position X="3.75" Y="2.25" Width="2.5" />
+    <Members>
+      <Method Name="ZakljucajGrupu" Hidden="true" />
+    </Members>
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="WCQuatar2k22.Repository.Interfaces.IRepository&lt;TEntity&gt;">
+    <Position X="9" Y="0.5" Width="1.75" />
+    <TypeIdentifier />
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

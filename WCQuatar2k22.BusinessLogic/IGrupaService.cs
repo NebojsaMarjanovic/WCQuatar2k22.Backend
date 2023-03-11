@@ -10,9 +10,10 @@ namespace WCQuatar2k22.BusinessLogic
 {
     public interface IGrupaService
     {
-        Task DodajGrupu(GrupaDTO grupaDTO);
+        Task KreirajGrupu(GrupaDTO grupaDTO);
         Task<List<Grupa>> GetGrupe();
         Task ZakljucajGrupu(int grupaId);
         Task<List<Grupa>> GetZakljucaneGrupe();
+        Task ObrisiGrupu(int grupaId);
     }
 }

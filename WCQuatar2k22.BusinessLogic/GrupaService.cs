@@ -14,7 +14,7 @@ namespace WCQuatar2k22.BusinessLogic
         {  
             _unitOfWork = unitOfWork;
         }
-        public async Task DodajGrupu(GrupaDTO grupaDTO)
+        public async Task KreirajGrupu(GrupaDTO grupaDTO)
         {
             Grupa grupa = new Grupa() { NazivGrupe = grupaDTO.NazivGrupe };
             int grupaId = await _unitOfWork.GrupaRepository.Add(grupa);
@@ -35,9 +35,23 @@ namespace WCQuatar2k22.BusinessLogic
             return await _unitOfWork.GrupaRepository.SearchBy(x => x.JeZakljucana == true);
         }
 
+        public async Task ObrisiGrupu(int grupaId)
+        {
+            var drzave = await _unitOfWork.DrzavaRepository.SearchBy(x => x.GrupaId == grupaId);
+            foreach (var drzava in drzave)
+            {
+                drzava.GrupaId = null;
+                await _unitOfWork.DrzavaRepository.Update(drzava);
+            }
+
+            await _unitOfWork.GrupaRepository.Delete(grupaId);
+            await _unitOfWork.Save();
+        }
+
         public async Task ZakljucajGrupu(int grupaId)
         {
             await _unitOfWork.GrupaRepository.ZakljucajGrupu(grupaId);
+
             await _unitOfWork.Save();
         }
     }
